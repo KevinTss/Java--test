@@ -97,7 +97,36 @@ public class TP1 {
     System.out.println(chaineChangee);
   }
 
-  public static void changer_bis(String chaine) {
+  public static void changer_bis() {
+
+    String phrase = "Ma super phrase rarement";
+    String nouvelle_phrase = "";
+
+    int longueur_phrase = phrase.length();
+
+    System.out.println( longueur_phrase );
+
+    for ( int cpt = 0 ; cpt < longueur_phrase ; cpt = cpt + 1 ) 
+    {
+      char lettre_courante = phrase.charAt(cpt);
+
+      if (lettre_courante == 'r') 
+      {
+        nouvelle_phrase = nouvelle_phrase + 'l';
+      } 
+      else 
+      {
+        nouvelle_phrase = nouvelle_phrase + lettre_courante;
+      }
+
+    }
+
+
+    System.out.println("Phrase de base: " + phrase);
+    System.out.println("Nouvelle phrase: " + nouvelle_phrase);
+  }
+
+  public static void changer_bs(String chaine) {
     // TBD
   }
 
@@ -110,10 +139,10 @@ public class TP1 {
     l'ordre inverse.
     */
 
-  public static void mirroir(String chaine) {
+  public static void miroir(String chaine) {
     String reverse = "";
 
-    for(int i = chaine.length() - 1; i >= 0; i--) {
+    for( int i = chaine.length() - 1; i >= 0 ; i--) {
       reverse = reverse + chaine.charAt(i);
     }
 
@@ -129,6 +158,8 @@ public class TP1 {
     changer("Recherchez les r dans cette phrase.");
     // changer_bis();
     mirroir("abcdef");
+
+    miroir("azerty");
   }
 
 }
